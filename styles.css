@@ -312,66 +312,173 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.code-window {
-    background-color: var(--bg-card);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px var(--shadow);
-    border: 1px solid var(--border-color);
-    max-width: 100%;
-}
-
-.code-header {
-    background-color: var(--bg-secondary);
-    padding: var(--spacing-sm);
+/* Animation de bordure animée */
+.animated-box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    color: var(--accent-primary);
+    box-shadow: inset 0 0 0 1px rgba(0, 217, 255, 0.3);
     display: flex;
     align-items: center;
-    gap: var(--spacing-xs);
-    border-bottom: 1px solid var(--border-color);
+    justify-content: center;
 }
 
-.code-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+.animated-box::before,
+.animated-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin: -15px;
+    box-shadow: inset 0 0 0 2px;
+    animation: clipMe 8s linear infinite;
 }
 
-.code-dot.red { background-color: var(--accent-danger); }
-.code-dot.yellow { background-color: var(--accent-warning); }
-.code-dot.green { background-color: var(--accent-secondary); }
+.animated-box::before {
+    animation-delay: -4s;
+    box-shadow: inset 0 0 0 2px var(--accent-primary);
+}
 
-.code-title {
-    margin-left: auto;
+.animated-box::after {
+    box-shadow: inset 0 0 0 2px var(--accent-secondary);
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    z-index: 1;
+}
+
+.box-icon {
+    font-size: 4rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.box-text {
     font-family: var(--font-mono);
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-}
-
-.code-content {
-    padding: var(--spacing-md);
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    line-height: 1.8;
-}
-
-.code-content pre {
-    margin: 0;
-    overflow-x: auto;
-}
-
-.code-keyword {
+    font-size: 1.25rem;
+    font-weight: 600;
     color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.code-comment {
-    color: var(--text-muted);
-    font-style: italic;
+@keyframes clipMe {
+    0%, 100% {
+        clip: rect(0px, 330px, 2px, 0px);
+    }
+    25% {
+        clip: rect(0px, 2px, 330px, 0px);
+    }
+    50% {
+        clip: rect(328px, 330px, 330px, 0px);
+    }
+    75% {
+        clip: rect(0px, 330px, 330px, 328px);
+    }
 }
 
-.code-success {
-    color: var(--accent-secondary);
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive pour l'animation */
+@media (max-width: 768px) {
+    .animated-box {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .animated-box::before,
+    .animated-box::after {
+        margin: -8px;
+    }
+    
+    .animated-box::before,
+    .animated-box::after {
+        margin: -12px;
+    }
+    
+    @keyframes clipMe {
+        0%, 100% {
+            clip: rect(0px, 274px, 2px, 0px);
+        }
+        25% {
+            clip: rect(0px, 2px, 274px, 0px);
+        }
+        50% {
+            clip: rect(272px, 274px, 274px, 0px);
+        }
+        75% {
+            clip: rect(0px, 274px, 274px, 272px);
+        }
+    }
+    
+    .box-icon {
+        font-size: 3rem;
+    }
+    
+    .box-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .animated-box {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .animated-box::before,
+    .animated-box::after {
+        margin: -6px;
+    }
+    
+    .animated-box::before,
+    .animated-box::after {
+        margin: -10px;
+    }
+    
+    @keyframes clipMe {
+        0%, 100% {
+            clip: rect(0px, 220px, 2px, 0px);
+        }
+        25% {
+            clip: rect(0px, 2px, 220px, 0px);
+        }
+        50% {
+            clip: rect(218px, 220px, 220px, 0px);
+        }
+        75% {
+            clip: rect(0px, 220px, 220px, 218px);
+        }
+    }
+    
+    .box-icon {
+        font-size: 2.5rem;
+    }
+    
+    .box-text {
+        font-size: 0.875rem;
+    }
 }
 
 .scroll-indicator {
