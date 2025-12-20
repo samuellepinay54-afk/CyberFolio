@@ -62,15 +62,19 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateActiveNav);
     updateActiveNav();
 
-    // Navbar background au scroll
+    // Navbar background au scroll (adapté au thème)
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgba(10, 14, 39, 0.98)';
-        } else {
-            navbar.style.backgroundColor = 'rgba(10, 14, 39, 0.95)';
-        }
-    });
+    const html = document.documentElement;
+    
+    function updateNavbarBackground() {
+        const isDark = html.getAttribute('data-theme') !== 'light';
+        const darkColor = window.scrollY > 50 ? 'rgba(10, 14, 39, 0.98)' : 'rgba(10, 14, 39, 0.95)';
+        const lightColor = window.scrollY > 50 ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.95)';
+        navbar.style.backgroundColor = isDark ? darkColor : lightColor;
+    }
+    
+    window.addEventListener('scroll', updateNavbarBackground);
+    updateNavbarBackground();
 });
 
 // ============================================

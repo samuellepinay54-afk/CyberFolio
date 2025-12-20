@@ -42,11 +42,16 @@
     --bg-tertiary: #f1f5f9;
     --bg-card: #ffffff;
     
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
+    --text-primary: #000000;
+    --text-secondary: #1a1a1a;
+    --text-muted: #666666;
     
-    --border-color: #e2e8f0;
+    --accent-primary: #00d9ff;
+    --accent-secondary: #00ff88;
+    --accent-danger: #ff4757;
+    --accent-warning: #ffa502;
+    
+    --border-color: #e0e0e0;
     --shadow: rgba(0, 0, 0, 0.1);
 }
 
@@ -106,11 +111,15 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(10, 14, 39, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     transition: var(--transition);
+}
+
+[data-theme="dark"] .navbar {
+    background-color: rgba(10, 14, 39, 0.95);
 }
 
 .navbar .container {
@@ -365,7 +374,7 @@ body {
     gap: 0;
     z-index: 2;
     position: relative;
-    background-color: rgba(10, 14, 39, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 0;
     border-radius: 8px;
     backdrop-filter: blur(10px);
@@ -373,6 +382,10 @@ body {
     max-width: 100%;
     overflow: hidden;
     min-height: 180px;
+}
+
+[data-theme="dark"] .box-content {
+    background-color: rgba(10, 14, 39, 0.95);
 }
 
 /* Terminal de code */
