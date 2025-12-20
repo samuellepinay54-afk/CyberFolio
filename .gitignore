@@ -1,0 +1,30 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers temporaires
+*.log
+*.tmp
+*.temp
+
+# Fichiers sensibles (à ne jamais commiter)
+# Décommentez si vous avez des fichiers sensibles
+# config.js
+# secrets.json
+
+# Dependencies (si ajoutées plus tard)
+node_modules/
+package-lock.json
+
+# Build files (si ajoutées plus tard)
+dist/
+build/
+

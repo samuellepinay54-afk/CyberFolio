@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio cybersécurité - Pentest & Blue Team | Analyste sécurité passionné">
+    <title>CyberFolio - Portfolio Cybersécurité</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="nav-logo">&lt;CyberFolio/&gt;</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#apropos" class="nav-link">À propos</a></li>
+                <li><a href="#competences" class="nav-link">Compétences</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
+                <li><a href="#methodologie" class="nav-link">Méthodologie</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Section 1: Landing Page -->
+    <section id="accueil" class="landing">
+        <div class="container">
+            <div class="landing-content">
+                <div class="landing-text">
+                    <h1 class="landing-title">
+                        <span class="greeting">Bonjour, je suis</span>
+                        <span class="name">[Votre Nom / Pseudo]</span>
+                    </h1>
+                    <h2 class="landing-subtitle">
+                        Cybersecurity Analyst | Pentest & Blue Team
+                    </h2>
+                    <p class="landing-description">
+                        Passionné par la cybersécurité offensive et défensive, je transforme les vulnérabilités en opportunités d'amélioration continue. 
+                        Spécialisé dans l'analyse de sécurité, le pentesting et la réponse aux incidents.
+                    </p>
+                    <div class="landing-cta">
+                        <a href="#projets" class="btn btn-primary">Voir les projets</a>
+                        <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                        <a href="#" class="btn btn-outline" id="cvDownload">Télécharger le CV</a>
+                    </div>
+                    <div class="landing-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Projets sécurité</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Machines HTB</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="landing-visual">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-title">security_scan.sh</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="code-comment"># Analyse de sécurité</span>
+<span class="code-keyword">nmap</span> -sV -sC target.com
+<span class="code-keyword">gobuster</span> dir -u target.com -w wordlist.txt
+<span class="code-keyword">sqlmap</span> -u "target.com/login" --dbs
+
+<span class="code-comment"># Résultat: Vulnérabilités identifiées</span>
+<span class="code-success">✓</span> CVE-2023-XXXX exploitable
+<span class="code-success">✓</span> Injection SQL détectée</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Section 2: À propos -->
+    <section id="apropos" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">
+                        Analyste cybersécurité autodidacte avec une passion pour la résolution de problèmes complexes 
+                        et la protection des systèmes d'information.
+                    </p>
+                    <p>
+                        Mon parcours en cybersécurité a débuté par une curiosité naturelle pour comprendre comment 
+                        les systèmes peuvent être compromis et comment les protéger efficacement. J'ai développé mes 
+                        compétences à travers des plateformes comme Hack The Box, TryHackMe et Root-Me, complétées 
+                        par une autoformation rigoureuse sur les méthodologies OWASP et MITRE ATT&CK.
+                    </p>
+                    <p>
+                        Je me spécialise dans l'analyse de vulnérabilités, le pentesting web et la réponse aux incidents. 
+                        Chaque projet que j'entreprends est une opportunité d'apprendre et d'améliorer mes compétences 
+                        techniques tout en contribuant à renforcer la sécurité des organisations.
+                    </p>
+                    <div class="values">
+                        <h3>Mes valeurs</h3>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <span class="value-icon">🔍</span>
+                                <h4>Curiosité</h4>
+                                <p>Explorer en profondeur pour comprendre les mécanismes de sécurité</p>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">⚖️</span>
+                                <h4>Éthique</h4>
+                                <p>Respect strict de la légalité et de l'éthique dans tous mes projets</p>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">🎯</span>
+                                <h4>Rigueur</h4>
+                                <p>Méthodologie structurée et documentation précise</p>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">🚀</span>
+                                <h4>Amélioration continue</h4>
+                                <p>Apprentissage permanent et remise en question</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Compétences -->
+    <section id="competences" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Compétences</h2>
+            <div class="skills-grid">
+                <!-- Sécurité Offensive -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <span class="skill-icon">🔐</span>
+                        <h3>Sécurité Offensive</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Pentesting Web</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                            <p class="skill-context">OWASP Top 10, Burp Suite, exploitation de vulnérabilités</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Exploitation</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                            <p class="skill-context">Metasploit, exploitation de buffer overflow, privesc</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">CTF & Labs</span>
+                                <span class="skill-level skill-advanced">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <p class="skill-context">Hack The Box, TryHackMe, Root-Me, PicoCTF</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sécurité Défensive -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <span class="skill-icon">🛡️</span>
+                        <h3>Sécurité Défensive</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">SIEM / Log Analysis</span>
+                                <span class="skill-level skill-beginner">Débutant</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 40%"></div>
+                            </div>
+                            <p class="skill-context">Elastic Stack, Splunk, analyse de logs</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Incident Response</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                            <p class="skill-context">Méthodologie NIST, forensics de base</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Vulnérabilité Management</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                            <p class="skill-context">Scanning, analyse CVSS, remédiation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Réseau -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <span class="skill-icon">🌐</span>
+                        <h3>Réseau</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Protocoles Réseau</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                            <p class="skill-context">TCP/IP, HTTP/HTTPS, DNS, DHCP</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Analyse de Trafic</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                            <p class="skill-context">Wireshark, tcpdump, analyse de paquets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Systèmes -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <span class="skill-icon">💻</span>
+                        <h3>Systèmes</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Linux</span>
+                                <span class="skill-level skill-advanced">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <p class="skill-context">Administration, scripting bash, hardening</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Windows</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                            <p class="skill-context">PowerShell, Active Directory, sécurité</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outils -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <span class="skill-icon">🧰</span>
+                        <h3>Outils</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Burp Suite</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                            <p class="skill-context">Proxy, scanner, extensions</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Metasploit</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                            <p class="skill-context">Exploitation, post-exploitation</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Nmap / Gobuster</span>
+                                <span class="skill-level skill-advanced">Avancé</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <p class="skill-context">Reconnaissance, scanning, énumération</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <span class="skill-icon">🧠</span>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Documentation</span>
+                                <span class="skill-level skill-advanced">Avancé</span>
+                            </div>
+                            <p class="skill-context">Rapports techniques, write-ups détaillés</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Communication</span>
+                                <span class="skill-level skill-intermediate">Intermédiaire</span>
+                            </div>
+                            <p class="skill-context">Explication de concepts techniques à un public non technique</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name-row">
+                                <span class="skill-name">Résolution de problèmes</span>
+                                <span class="skill-level skill-advanced">Avancé</span>
+                            </div>
+                            <p class="skill-context">Approche méthodique et créative</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Projets -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2 class="section-title">Projets</h2>
+            <p class="section-subtitle">Projets pratiques démontrant mes compétences en cybersécurité</p>
+            
+            <!-- Filtres -->
+            <div class="project-filters" id="projectFilters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="offensif">🔐 Offensif</button>
+                <button class="filter-btn" data-filter="defensif">🛡️ Défensif</button>
+                <button class="filter-btn" data-filter="reseau">🌐 Réseau</button>
+                <button class="filter-btn" data-filter="forensic">🔍 Forensic</button>
+            </div>
+
+            <!-- Grille de projets -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projet 1 -->
+                <article class="project-card" data-category="offensif" data-featured="true">
+                    <div class="project-badge">⭐ Projet phare</div>
+                    <div class="project-header">
+                        <h3 class="project-title">Analyse de vulnérabilités web - Application e-commerce</h3>
+                        <div class="project-tags">
+                            <span class="tag tag-offensif">Offensif</span>
+                            <span class="tag tag-web">Web</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>🎯 Objectif</h4>
+                            <p>Identifier et exploiter les vulnérabilités d'une application web e-commerce dans un environnement de lab sécurisé.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📋 Contexte</h4>
+                            <p>Projet personnel réalisé sur une application DVWA (Damn Vulnerable Web Application) déployée localement.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>🔓 Problème de sécurité traité</h4>
+                            <ul>
+                                <li>Injection SQL dans le formulaire de login</li>
+                                <li>XSS (Cross-Site Scripting) stocké et réfléchi</li>
+                                <li>CSRF (Cross-Site Request Forgery)</li>
+                                <li>Authentification faible</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🔧 Méthodologie</h4>
+                            <ol>
+                                <li>Reconnaissance : analyse de l'application avec Burp Suite</li>
+                                <li>Cartographie : identification des endpoints et fonctionnalités</li>
+                                <li>Test de vulnérabilités : exploitation manuelle et automatisée</li>
+                                <li>Documentation : rapport détaillé avec preuves de concept</li>
+                            </ol>
+                        </div>
+                        <div class="project-section">
+                            <h4>🛠️ Outils utilisés</h4>
+                            <div class="tools-list">
+                                <span class="tool-tag">Burp Suite</span>
+                                <span class="tool-tag">SQLMap</span>
+                                <span class="tool-tag">OWASP ZAP</span>
+                                <span class="tool-tag">Nmap</span>
+                                <span class="tool-tag">Gobuster</span>
+                            </div>
+                        </div>
+                        <div class="project-section">
+                            <h4>✅ Résultat</h4>
+                            <p>Identification de 8 vulnérabilités critiques et 12 vulnérabilités moyennes. Création d'un rapport de sécurité professionnel avec recommandations de remédiation.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📚 Ce que j'ai appris</h4>
+                            <p>Approfondissement de la méthodologie OWASP, maîtrise de Burp Suite, compréhension des mécanismes d'injection SQL et XSS.</p>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#" class="project-link" target="_blank">
+                            <span>Voir sur GitHub</span>
+                            <span>→</span>
+                        </a>
+                        <a href="#" class="project-link" target="_blank">
+                            <span>Rapport détaillé</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Projet 2 -->
+                <article class="project-card" data-category="defensif">
+                    <div class="project-header">
+                        <h3 class="project-title">Mise en place d'un SIEM avec ELK Stack</h3>
+                        <div class="project-tags">
+                            <span class="tag tag-defensif">Défensif</span>
+                            <span class="tag tag-siem">SIEM</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>🎯 Objectif</h4>
+                            <p>Déployer et configurer un système de monitoring et d'analyse de logs pour détecter les activités suspectes.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📋 Contexte</h4>
+                            <p>Projet de lab personnel utilisant Docker pour déployer Elasticsearch, Logstash et Kibana.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>🛡️ Problème de sécurité traité</h4>
+                            <ul>
+                                <li>Manque de visibilité sur les événements de sécurité</li>
+                                <li>Détection d'intrusions</li>
+                                <li>Corrélation d'événements</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🔧 Méthodologie</h4>
+                            <ol>
+                                <li>Déploiement de l'infrastructure ELK avec Docker Compose</li>
+                                <li>Configuration de Logstash pour ingérer les logs</li>
+                                <li>Création de dashboards Kibana pour la visualisation</li>
+                                <li>Développement de règles de détection</li>
+                            </ol>
+                        </div>
+                        <div class="project-section">
+                            <h4>🛠️ Outils utilisés</h4>
+                            <div class="tools-list">
+                                <span class="tool-tag">Elasticsearch</span>
+                                <span class="tool-tag">Logstash</span>
+                                <span class="tool-tag">Kibana</span>
+                                <span class="tool-tag">Docker</span>
+                                <span class="tool-tag">Filebeat</span>
+                            </div>
+                        </div>
+                        <div class="project-section">
+                            <h4>✅ Résultat</h4>
+                            <p>SIEM fonctionnel capable d'ingérer et d'analyser les logs en temps réel avec des dashboards personnalisés pour la détection d'anomalies.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📚 Ce que j'ai appris</h4>
+                            <p>Architecture SIEM, parsing de logs, création de règles de corrélation, visualisation de données de sécurité.</p>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#" class="project-link" target="_blank">
+                            <span>Voir sur GitHub</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Projet 3 -->
+                <article class="project-card" data-category="offensif">
+                    <div class="project-header">
+                        <h3 class="project-title">Write-up Hack The Box - Machine [Machine Name]</h3>
+                        <div class="project-tags">
+                            <span class="tag tag-offensif">Offensif</span>
+                            <span class="tag tag-htb">HTB</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>🎯 Objectif</h4>
+                            <p>Résoudre une machine Hack The Box de difficulté moyenne et documenter la méthodologie complète.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📋 Contexte</h4>
+                            <p>Machine CTF résolue sur la plateforme Hack The Box avec documentation détaillée de chaque étape.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>🔓 Problème de sécurité traité</h4>
+                            <ul>
+                                <li>Reconnaissance et énumération</li>
+                                <li>Exploitation de vulnérabilités</li>
+                                <li>Escalade de privilèges</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🔧 Méthodologie</h4>
+                            <ol>
+                                <li>Reconnaissance : Nmap, Gobuster, énumération manuelle</li>
+                                <li>Exploitation : exploitation de la vulnérabilité identifiée</li>
+                                <li>Post-exploitation : stabilisation du shell, privesc</li>
+                                <li>Documentation : write-up complet avec screenshots</li>
+                            </ol>
+                        </div>
+                        <div class="project-section">
+                            <h4>🛠️ Outils utilisés</h4>
+                            <div class="tools-list">
+                                <span class="tool-tag">Nmap</span>
+                                <span class="tool-tag">Gobuster</span>
+                                <span class="tool-tag">Metasploit</span>
+                                <span class="tool-tag">LinPEAS</span>
+                                <span class="tool-tag">Burp Suite</span>
+                            </div>
+                        </div>
+                        <div class="project-section">
+                            <h4>✅ Résultat</h4>
+                            <p>Machine résolue avec accès root. Write-up publié sur GitHub avec méthodologie détaillée.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📚 Ce que j'ai appris</h4>
+                            <p>Techniques d'énumération avancées, exploitation de services spécifiques, méthodes d'escalade de privilèges Linux.</p>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#" class="project-link" target="_blank">
+                            <span>Voir le write-up</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Projet 4 -->
+                <article class="project-card" data-category="reseau">
+                    <div class="project-header">
+                        <h3 class="project-title">Analyse de trafic réseau - Détection d'intrusion</h3>
+                        <div class="project-tags">
+                            <span class="tag tag-reseau">Réseau</span>
+                            <span class="tag tag-forensic">Forensic</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>🎯 Objectif</h4>
+                            <p>Analyser un fichier pcap pour identifier une activité malveillante et reconstruire l'attaque.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📋 Contexte</h4>
+                            <p>Projet de formation utilisant un fichier pcap fourni lors d'un challenge de forensic réseau.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>🌐 Problème de sécurité traité</h4>
+                            <ul>
+                                <li>Détection d'intrusion réseau</li>
+                                <li>Analyse de trafic suspect</li>
+                                <li>Reconstruction d'attaque</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🔧 Méthodologie</h4>
+                            <ol>
+                                <li>Ouverture du pcap dans Wireshark</li>
+                                <li>Filtrage et analyse des paquets suspects</li>
+                                <li>Suivi des flux TCP/UDP</li>
+                                <li>Extraction de données et reconstruction</li>
+                            </ol>
+                        </div>
+                        <div class="project-section">
+                            <h4>🛠️ Outils utilisés</h4>
+                            <div class="tools-list">
+                                <span class="tool-tag">Wireshark</span>
+                                <span class="tool-tag">Tcpdump</span>
+                                <span class="tool-tag">tshark</span>
+                                <span class="tool-tag">NetworkMiner</span>
+                            </div>
+                        </div>
+                        <div class="project-section">
+                            <h4>✅ Résultat</h4>
+                            <p>Identification de l'attaque, extraction des données exfiltrées, rapport d'analyse complet.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📚 Ce que j'ai appris</h4>
+                            <p>Analyse approfondie de protocoles réseau, techniques de filtrage avancées dans Wireshark, reconstruction de sessions.</p>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#" class="project-link" target="_blank">
+                            <span>Voir sur GitHub</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Template pour nouveaux projets -->
+                <article class="project-card project-template" data-category="offensif" style="display: none;">
+                    <div class="project-header">
+                        <h3 class="project-title">[Titre du projet]</h3>
+                        <div class="project-tags">
+                            <span class="tag tag-offensif">[Catégorie]</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>🎯 Objectif</h4>
+                            <p>[Description de l'objectif du projet]</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📋 Contexte</h4>
+                            <p>[Contexte : lab, perso, CTF, réel]</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>🔓 Problème de sécurité traité</h4>
+                            <ul>
+                                <li>[Vulnérabilité 1]</li>
+                                <li>[Vulnérabilité 2]</li>
+                            </ul>
+                        </div>
+                        <div class="project-section">
+                            <h4>🔧 Méthodologie</h4>
+                            <ol>
+                                <li>[Étape 1]</li>
+                                <li>[Étape 2]</li>
+                            </ol>
+                        </div>
+                        <div class="project-section">
+                            <h4>🛠️ Outils utilisés</h4>
+                            <div class="tools-list">
+                                <span class="tool-tag">[Outil 1]</span>
+                                <span class="tool-tag">[Outil 2]</span>
+                            </div>
+                        </div>
+                        <div class="project-section">
+                            <h4>✅ Résultat</h4>
+                            <p>[Résultat obtenu]</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>📚 Ce que j'ai appris</h4>
+                            <p>[Apprentissages]</p>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#" class="project-link" target="_blank">
+                            <span>Voir sur GitHub</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Méthodologie -->
+    <section id="methodologie" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Méthodologie & Approche</h2>
+            <div class="methodology-content">
+                <div class="methodology-intro">
+                    <p class="lead">
+                        Ma démarche en cybersécurité repose sur une méthodologie structurée, 
+                        inspirée des frameworks reconnus et adaptée à chaque contexte.
+                    </p>
+                </div>
+                <div class="methodology-grid">
+                    <div class="methodology-card">
+                        <div class="methodology-icon">🎯</div>
+                        <h3>Approche structurée</h3>
+                        <p>
+                            J'utilise des méthodologies éprouvées comme OWASP Testing Guide pour le pentesting web, 
+                            MITRE ATT&CK pour la compréhension des tactiques adverses, et la Cyber Kill Chain 
+                            pour l'analyse d'attaques.
+                        </p>
+                    </div>
+                    <div class="methodology-card">
+                        <div class="methodology-icon">🔍</div>
+                        <h3>Reconnaissance approfondie</h3>
+                        <p>
+                            La phase de reconnaissance est cruciale. J'accorde une attention particulière à 
+                            l'énumération complète des systèmes, services et applications avant toute exploitation.
+                        </p>
+                    </div>
+                    <div class="methodology-card">
+                        <div class="methodology-icon">📝</div>
+                        <h3>Documentation rigoureuse</h3>
+                        <p>
+                            Chaque étape est documentée avec précision : commandes utilisées, résultats obtenus, 
+                            vulnérabilités identifiées. Cette rigueur facilite la reproduction et l'apprentissage.
+                        </p>
+                    </div>
+                    <div class="methodology-card">
+                        <div class="methodology-icon">⚖️</div>
+                        <h3>Éthique et légalité</h3>
+                        <p>
+                            Tous mes tests sont réalisés uniquement dans des environnements autorisés (labs, 
+                            machines dédiées, autorisations écrites). Le respect de l'éthique et de la légalité 
+                            est fondamental.
+                        </p>
+                    </div>
+                    <div class="methodology-card">
+                        <div class="methodology-icon">🔄</div>
+                        <h3>Amélioration continue</h3>
+                        <p>
+                            Chaque projet est une opportunité d'apprendre. Je pratique régulièrement sur des 
+                            plateformes comme HTB et TryHackMe pour maintenir et améliorer mes compétences.
+                        </p>
+                    </div>
+                    <div class="methodology-card">
+                        <div class="methodology-icon">🤝</div>
+                        <h3>Communication claire</h3>
+                        <p>
+                            Je m'efforce de rendre mes rapports accessibles, avec des explications claires des 
+                            vulnérabilités et des recommandations pratiques pour la remédiation.
+                        </p>
+                    </div>
+                </div>
+                <div class="frameworks-section">
+                    <h3>Frameworks et standards utilisés</h3>
+                    <div class="frameworks-list">
+                        <div class="framework-item">
+                            <strong>OWASP</strong>
+                            <span>Top 10, Testing Guide, ASVS</span>
+                        </div>
+                        <div class="framework-item">
+                            <strong>MITRE ATT&CK</strong>
+                            <span>Matrice de tactiques et techniques</span>
+                        </div>
+                        <div class="framework-item">
+                            <strong>PTES</strong>
+                            <span>Penetration Testing Execution Standard</span>
+                        </div>
+                        <div class="framework-item">
+                            <strong>NIST</strong>
+                            <span>Cybersecurity Framework</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Certifications & Formation -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications & Formation</h2>
+            <div class="certifications-content">
+                <!-- Certifications -->
+                <div class="cert-section">
+                    <h3>Certifications</h3>
+                    <div class="certs-grid">
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <span class="cert-icon">🏆</span>
+                                <div>
+                                    <h4>CompTIA Security+</h4>
+                                    <span class="cert-status cert-in-progress">En cours</span>
+                                </div>
+                            </div>
+                            <p class="cert-description">Certification de base en cybersécurité couvrant les concepts fondamentaux</p>
+                            <div class="cert-date">Prévue : Q2 2024</div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <span class="cert-icon">🎓</span>
+                                <div>
+                                    <h4>eJPT (eLearnSecurity Junior Penetration Tester)</h4>
+                                    <span class="cert-status cert-planned">Planifiée</span>
+                                </div>
+                            </div>
+                            <p class="cert-description">Certification pratique en pentesting orientée hands-on</p>
+                            <div class="cert-date">Objectif : Q3 2024</div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-header">
+                                <span class="cert-icon">🔐</span>
+                                <div>
+                                    <h4>OSCP (Offensive Security Certified Professional)</h4>
+                                    <span class="cert-status cert-planned">Objectif long terme</span>
+                                </div>
+                            </div>
+                            <p class="cert-description">Certification reconnue en pentesting offensive</p>
+                            <div class="cert-date">Objectif : 2025</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plateformes -->
+                <div class="cert-section">
+                    <h3>Plateformes de pratique</h3>
+                    <div class="platforms-grid">
+                        <div class="platform-card">
+                            <div class="platform-header">
+                                <span class="platform-icon">💀</span>
+                                <h4>Hack The Box</h4>
+                            </div>
+                            <div class="platform-stats">
+                                <div class="platform-stat">
+                                    <span class="stat-value">500+</span>
+                                    <span class="stat-label">Machines résolues</span>
+                                </div>
+                                <div class="platform-stat">
+                                    <span class="stat-value">85%</span>
+                                    <span class="stat-label">Taux de réussite</span>
+                                </div>
+                            </div>
+                            <a href="#" class="platform-link" target="_blank">Voir le profil →</a>
+                        </div>
+                        <div class="platform-card">
+                            <div class="platform-header">
+                                <span class="platform-icon">🎯</span>
+                                <h4>TryHackMe</h4>
+                            </div>
+                            <div class="platform-stats">
+                                <div class="platform-stat">
+                                    <span class="stat-value">200+</span>
+                                    <span class="stat-label">Rooms complétées</span>
+                                </div>
+                                <div class="platform-stat">
+                                    <span class="stat-value">Top 5%</span>
+                                    <span class="stat-label">Classement global</span>
+                                </div>
+                            </div>
+                            <a href="#" class="platform-link" target="_blank">Voir le profil →</a>
+                        </div>
+                        <div class="platform-card">
+                            <div class="platform-header">
+                                <span class="platform-icon">🔓</span>
+                                <h4>Root-Me</h4>
+                            </div>
+                            <div class="platform-stats">
+                                <div class="platform-stat">
+                                    <span class="stat-value">150+</span>
+                                    <span class="stat-label">Challenges résolus</span>
+                                </div>
+                                <div class="platform-stat">
+                                    <span class="stat-value">Web, Réseau</span>
+                                    <span class="stat-label">Catégories</span>
+                                </div>
+                            </div>
+                            <a href="#" class="platform-link" target="_blank">Voir le profil →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Autoformation -->
+                <div class="cert-section">
+                    <h3>Autoformation</h3>
+                    <div class="learning-list">
+                        <div class="learning-item">
+                            <span class="learning-icon">📚</span>
+                            <div>
+                                <h4>Cours en ligne</h4>
+                                <p>Formations sur Udemy, Cybrary, Pluralsight (Pentesting, Ethical Hacking, SIEM)</p>
+                            </div>
+                        </div>
+                        <div class="learning-item">
+                            <span class="learning-icon">📖</span>
+                            <div>
+                                <h4>Lectures</h4>
+                                <p>"The Web Application Hacker's Handbook", "Metasploit: The Penetration Tester's Guide", documentation OWASP</p>
+                            </div>
+                        </div>
+                        <div class="learning-item">
+                            <span class="learning-icon">🎥</span>
+                            <div>
+                                <h4>Ressources vidéo</h4>
+                                <p>Chaînes YouTube spécialisées (IppSec, John Hammond, NetworkChuck), conférences (DEF CON, Black Hat)</p>
+                            </div>
+                        </div>
+                        <div class="learning-item">
+                            <span class="learning-icon">💻</span>
+                            <div>
+                                <h4>Pratique continue</h4>
+                                <p>Labs personnels, projets GitHub, participation à des CTF, création de write-ups</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Contact -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <p class="lead">
+                        Disponible pour des opportunités en alternance, stage ou freelance en cybersécurité.
+                    </p>
+                    <p>
+                        N'hésitez pas à me contacter pour discuter de projets, collaborations ou opportunités.
+                    </p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <a href="mailto:votre.email@example.com" class="contact-link">votre.email@example.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <a href="#" class="contact-link" target="_blank">linkedin.com/in/votre-profil</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🐙</div>
+                        <h3>GitHub</h3>
+                        <a href="#" class="contact-link" target="_blank">github.com/votre-username</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">💀</div>
+                        <h3>Hack The Box</h3>
+                        <a href="#" class="contact-link" target="_blank">app.hackthebox.com/profile/xxxxx</a>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <p class="cta-text">🚀 Disponible pour alternance à partir de [Date]</p>
+                    <a href="mailto:votre.email@example.com" class="btn btn-primary">Me contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 CyberFolio. Construit avec passion pour la cybersécurité.</p>
+                <p class="footer-note">🔒 Tous les projets présentés ont été réalisés dans des environnements autorisés et légaux.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
