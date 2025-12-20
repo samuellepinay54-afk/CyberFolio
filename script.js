@@ -144,6 +144,86 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
+// EXPANSION/RÉDUCTION DES CARTES DE PROJETS
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        const content = card.querySelector('.project-content');
+        const footer = card.querySelector('.project-footer');
+        const header = card.querySelector('.project-header');
+        
+        if (!content || !footer || !header) return;
+        
+        // Fonction pour vérifier si le contenu dépasse
+        const checkIfNeedsExpand = () => {
+            // Temporairement retirer max-height pour mesurer la vraie hauteur
+            const originalMaxHeight = card.style.maxHeight;
+            card.style.maxHeight = 'none';
+            
+            const naturalHeight = card.offsetHeight;
+            const maxHeight = 500; // Hauteur maximale définie en CSS
+            
+            // Remettre le max-height
+            card.style.maxHeight = originalMaxHeight;
+            
+            return naturalHeight > maxHeight;
+        };
+        
+        // Fonction pour initialiser le bouton
+        const initExpandButton = () => {
+            // Vérifier si le bouton existe déjà
+            let toggleBtn = footer.querySelector('.expand-toggle');
+            
+            if (!toggleBtn && checkIfNeedsExpand()) {
+                // Créer le bouton
+                toggleBtn = document.createElement('button');
+                toggleBtn.className = 'expand-toggle';
+                toggleBtn.type = 'button';
+                toggleBtn.innerHTML = '<span class="text">Voir plus</span> <span class="icon">▼</span>';
+                
+                // Insérer le bouton au début du footer
+                footer.insertBefore(toggleBtn, footer.firstChild);
+                
+                // Ajouter l'événement
+                toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isExpanded = card.classList.contains('expanded');
+                    
+                    if (isExpanded) {
+                        card.classList.remove('expanded');
+                        toggleBtn.classList.remove('expanded');
+                        toggleBtn.querySelector('.text').textContent = 'Voir plus';
+                    } else {
+                        card.classList.add('expanded');
+                        toggleBtn.classList.add('expanded');
+                        toggleBtn.querySelector('.text').textContent = 'Voir moins';
+                    }
+                });
+            }
+        };
+        
+        // Initialiser après un court délai pour laisser le temps au rendu
+        setTimeout(() => {
+            initExpandButton();
+        }, 100);
+        
+        // Vérifier au redimensionnement
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                initExpandButton();
+            }, 150);
+        });
+    });
+});
+
+// ============================================
 // ANIMATION AU SCROLL
 // ============================================
 
