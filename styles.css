@@ -315,48 +315,16 @@ body {
     position: relative;
 }
 
-/* Animation de bordure animée - Deux contours séparés qui tournent */
+/* Conteneur pour le terminal */
 .animated-box {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 500px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
-}
-
-/* Contour extérieur - Bleu (plus grand, avec espace) */
-.border-outer {
-    position: absolute;
-    top: -25px;
-    left: -25px;
-    width: calc(100% + 50px);
-    height: calc(100% + 50px);
-    border: 5px solid transparent;
-    border-top: 5px solid var(--accent-primary);
-    border-right: 5px solid var(--accent-primary);
-    border-radius: 8px;
-    animation: rotateBorderOuter 3s linear infinite;
-    z-index: 1;
-    box-sizing: border-box;
-}
-
-/* Contour intérieur - Vert (plus petit, avec espace entre les deux) */
-.border-inner {
-    position: absolute;
-    top: -12px;
-    left: -12px;
-    width: calc(100% + 24px);
-    height: calc(100% + 24px);
-    border: 5px solid transparent;
-    border-bottom: 5px solid var(--accent-secondary);
-    border-left: 5px solid var(--accent-secondary);
-    border-radius: 8px;
-    animation: rotateBorderInner 3s linear infinite reverse;
-    z-index: 1;
-    box-sizing: border-box;
 }
 
 .box-content {
@@ -472,23 +440,6 @@ body {
     }
 }
 
-@keyframes rotateBorderOuter {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rotateBorderInner {
-    0% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
 
 @keyframes pulse {
     0%, 100% {
@@ -501,25 +452,10 @@ body {
     }
 }
 
-/* Responsive pour l'animation */
+/* Responsive pour le terminal */
 @media (max-width: 768px) {
     .animated-box {
-        width: 250px;
-        height: 250px;
-    }
-    
-    .animated-box::before {
-        top: -15px;
-        left: -15px;
-        right: -15px;
-        bottom: -15px;
-    }
-    
-    .animated-box::after {
-        top: -8px;
-        left: -8px;
-        right: -8px;
-        bottom: -8px;
+        max-width: 100%;
     }
     
     .terminal-body {
@@ -535,22 +471,7 @@ body {
 
 @media (max-width: 480px) {
     .animated-box {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .animated-box::before {
-        top: -12px;
-        left: -12px;
-        right: -12px;
-        bottom: -12px;
-    }
-    
-    .animated-box::after {
-        top: -6px;
-        left: -6px;
-        right: -6px;
-        bottom: -6px;
+        max-width: 100%;
     }
     
     .terminal-body {
