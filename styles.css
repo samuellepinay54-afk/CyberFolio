@@ -1363,6 +1363,40 @@ body {
     color: var(--accent-primary);
 }
 
+.unavailable-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: default;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.unavailable-text {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.unavailable-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent-primary);
+    animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
 .contact-cta {
     text-align: center;
     padding: var(--spacing-lg);
