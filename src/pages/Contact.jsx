@@ -59,8 +59,8 @@ const Contact = () => {
     {
       icon: '🐙',
       label: 'GitHub',
-      value: 'samuellepinay54-afk.github.io',
-      link: 'https://samuellepinay54-afk.github.io',
+      value: 'github.com/AxASam-afk',
+      link: 'https://github.com/AxASam-afk',
     },
     {
       icon: '💀',
